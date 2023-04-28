@@ -1,0 +1,42 @@
+body {
+    background-image: url(backdrop\ pic.jpg);
+}
+
+.browse {
+    display: flex;
+    justify-content: center;
+     align-items: center;
+     padding: 80px;
+}
+
+.element {
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    background: lightseagreen;
+    align-items: center;
+    justify-content: flex-end;
+    color: white;
+    
+}
+
+h1 {
+    float: inline-start;
+    color:antiquewhite
+}
+
+.temp1{
+
+}
+
+.temp2{
+
+}
+
+.temp3{
+
+}
+
+.temp4{
+
+}
