@@ -5,12 +5,10 @@ var tuesday = document.querySelector(".day2");
 var wednesday = document.querySelector(".day3");
 var thursday = document.querySelector(".day4");
 var friday = document.querySelector(".day5");
-var temp1 = document.querySelector(".temp1");
-var element = document.querySelectorAll('.element');
-var windspeed = document.querySelectorAll('.windSpeed');
-var windspeed1 = document.querySelector(".windspeed1");
+var temp = document.querySelector(".temp");
+var icons = document.querySelectorAll('.icons');
+var windspeed = document.querySelectorAll('.windspeed');
 var humidity = document.querySelectorAll('.humidity');
-var humidity1 = document.querySelector(".humidity1");
 var search = document.querySelector(".search");
 var searchBar = document.querySelector(".searchBar");
 var cityName = document.querySelector(".cityName");
@@ -22,13 +20,13 @@ async function getWeatherByCity(cityName) {
     var respond = await fetch(endResult);
     var weather = await respond.json();
 
-    // console.log(weather);
-    // console.log(weather.main.humidity)
-    // console.log(weather.main.temp)
-    // console.log(weather.wind.speed)
-    temp1.textContent = 'temperature: ' + weather.main.temp
-    windspeed1.textContent = 'windspeed:' + weather.wind.speed + "mph"
-    humidity1.textContent = "humidity:" + weather.main.humidity
+    console.log(weather);
+    console.log(weather.main.humidity)
+    console.log(weather.main.temp)
+    console.log(weather.wind.speed)
+    temp.textContent = 'temperature: ' + weather.main.temp
+    windspeed.textContent = 'windspeed:' + weather.wind.speed + "mph"
+    humidity.textContent = "humidity:" + weather.main.humidity
     var lat = weather.coord.lat
     var lon = weather.coord.lon
     // pull  city name form data and save it in an array of searches in local storage *remember only stings can be saved to local storage so you will need you JSON.stringify() when saving and JSON.parse() when retrieving 
@@ -55,17 +53,14 @@ async function forcastWeather(lat, lon) {
 
         forecast.push(data.list[i])
     }
-    for (let i = 0; i < element.length; i++) {
-        const children = element[i].children;
+    for (let i = 0; i < icons.length; i++) {
+        const children = icons[i].children;
         children[0].textContent = forecast[i].dt_txt
-        children[1].textContent =forecast[i].main.temp + "\u00B0"
-        children[2].textContent =forecast[i].wind.speed + "mph"
-        children[3].textContent =forecast[i].main.humidity + "%"
+        children[1].textContent = forecast[i].main.temp + "\u00B0"
+        children[2].textContent = forecast[i].wind.speed + "mph"
+        children[3].textContent = forecast[i].main.humidity + "%"
 
-        
+
     }
 }
 
-function fiveDayForecast () {
-
-}
