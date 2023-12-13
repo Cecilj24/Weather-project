@@ -1,6 +1,9 @@
-body {
-    background-image: url(backdrop\ pic.jpg);
-}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:wght@400;500;600;700&display=swap);
+
+
+
+
+
 
 .browse {
     display: flex;
@@ -37,6 +40,7 @@ body {
     display: flex;
     justify-content: center;
     float: left;
+    text-align: center;
     height: 200px;
     width: 190px;
     margin: 20px;
@@ -47,4 +51,22 @@ body {
 h1 {
     float: inline-start;
     color: antiquewhite
+}
+
+.image {
+    height: 70px;
+    width: 80%;
+}
+
+.imgClass {
+    height: 100px;
+    width: 100%;
+}
+
+.temp {
+    /* margin: 5px; */
+    /*  background-color: rgb(106, 215, 255); */
+    position: relative;
+    text-align: center;
+    bottom: 0px;
 }

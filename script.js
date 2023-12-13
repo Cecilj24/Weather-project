@@ -21,14 +21,14 @@ async function getWeatherByCity(cityName) {
     var weather = await respond.json();
 
     console.log(weather);
-    console.log(weather.main.humidity)
-    console.log(weather.main.temp)
-    console.log(weather.wind.speed)
-    temp.textContent = 'temperature: ' + weather.main.temp
-    windspeed.textContent = 'windspeed:' + weather.wind.speed + "mph"
-    humidity.textContent = "humidity:" + weather.main.humidity
-    var lat = weather.coord.lat
-    var lon = weather.coord.lon
+    console.log(weather.main.humidity);
+    console.log(weather.main.temp);
+    console.log(weather.wind.speed);
+    temp.textContent = 'temperature: ' + weather.main.temp;
+    windspeed.textContent = 'windspeed:' + weather.wind.speed + "mph";
+    humidity.textContent = "humidity:" + weather.main.humidity;
+    var lat = weather.coord.lat;
+    var lon = weather.coord.lon;
     // pull  city name form data and save it in an array of searches in local storage *remember only stings can be saved to local storage so you will need you JSON.stringify() when saving and JSON.parse() when retrieving 
     // localstorage.setItem(key, value)  localstorage.getItem(key)
     forcastWeather(lat, lon);
@@ -55,10 +55,10 @@ async function forcastWeather(lat, lon) {
     }
     for (let i = 0; i < icons.length; i++) {
         const children = icons[i].children;
-        children[0].textContent = forecast[i].dt_txt
-        children[1].textContent = forecast[i].main.temp + "\u00B0"
-        children[2].textContent = forecast[i].wind.speed + "mph"
-        children[3].textContent = forecast[i].main.humidity + "%"
+        children[0].textContent = forecast[i].dt_txt;
+        children[1].textContent = forecast[i].main.temp + "\u00B0";
+        children[2].textContent = forecast[i].wind.speed + "mph";
+        children[3].textContent = forecast[i].main.humidity + "%";
 
 
     }
