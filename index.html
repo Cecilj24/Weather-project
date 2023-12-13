@@ -1,79 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Weather Project</title>
-    <link rel="stylesheet" href="style.css" />
-    <style>
-
-    </style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1 class="Para1">Weather Dashboard</h1>
-    <div class="browse">
-        <h3>Enter a City Name</h3>
-        <input type="text" placeholder="City, state or zipcode" class="searchBar">
-        <button class="search">search</button>
-    </div>
+    <h1> Weather Dashboard</h1>
     <div class="container">
-        <div class="iconContainer">
-
-            <div class=icons>
-                <div class="image"><img src=weathICON.png class="imgClass" id="img1"></div>
-                <p class="day">Monday</p>
-                <p class="temp">&deg;</p>
-                <p class="windspeed"></p>
-                <p class="humidity"></p>
-            </div>
-
-            <div class=icons>
-                <div class="image"><img src=weathICON.png class="imgClass" id="img1"></div>
-                <p class="day">Tuesday</p>
-                <p class="temp"> &deg;</p>
-                <p class="windspeed"></p>
-                <p class="humidity"></p>
-            </div>
-
-
-            <div class=icons>
-                <div class="image"><img src=weathICON.png class="imgClass" id="img1"></div>
-                <p class="day">Wednesday</p>
-                <p class="temp">&deg;</p>
-                <p class="windspeed"></p>
-                <p class="humidity"></p>
-            </div>
-
-            <div class=icons>
-                <div class="image"><img src=weathICON.png class="imgClass" id="img1"></div>
-                <p class="day">Thursday</p>
-                <p class="temp">&deg;</p>
-                <p class="windspeed"></p>
-                <p class="humidity"></p>
-            </div>
-
-            <div class=icons>
-                <div class="image"><img src=weathICON.png class="imgClass" id="img1"></div>
-                <p class="day">Friday</p>
-                <p class="temp">&deg;</p>
-                <p class="windspeed"></p>
-                <p class="humidity"></p>
-            </div>
-
+        <div class="weather-input">
+            <h3>Enter a City Name</h3>
+            <input type="text" placeholder="City, state or zipcode" class="searchBar">
+            <button class="search-btn">search</button>
+            <div class="seperator"></div>
+            <button class="location-btn">Use Current Location</button>
         </div>
-    </div>
-
-
-
-
-
-
-
-
-    <script src="script.js"></script>
+        <div class="weather-data">
+            <div class="current-weather">
+                <div class="details">
+                    <h2>Moreno Valley (12-12-2023)</h2>
+                    <h4>Temperature </h4>
+                    <h4>Wind</h4>
+                    <h4>Humidity</h4>
+                </div>
+                <div class="icon">
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon">
+                    <h4>Moderate Rain</h4>
+                </div>
+            </div>
+        </div>
 </body>
 
 </html>
